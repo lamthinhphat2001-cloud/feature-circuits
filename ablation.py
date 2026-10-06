@@ -134,7 +134,7 @@ if __name__ == "__main__":
     ]
 
     # Load circuit
-    circuit = t.load(args.circuit)["nodes"]
+    circuit = t.load(args.circuit, weights_only=False)["nodes"]
     nodes = {
         submod: circuit[submod.name].abs() > args.threshold for submod in submodules
     }
