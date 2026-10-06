@@ -11,12 +11,10 @@ START_LAYER=$5
 python ablation.py \
 --model $MODEL \
 --circuit $CIRCUIT \
---data ${EVAL_DATA}.json \
---num_examples 40 \
---dict_id $DICTID \
+--data $EVAL_DATA \
+--examples 40 \
 --threshold $THRESHOLD \
 --ablation mean \
 --handle_errors 'default' \
 --start_layer $START_LAYER \
---batch_size 20 \
 --device cuda:0
